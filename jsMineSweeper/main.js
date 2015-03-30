@@ -24,7 +24,7 @@ var imgIndexes = {
 	"floor": "img/floor.png",
 	"bomb": "img/mine.png",
 	"redfloor": "img/redfloor.png",
-	"icons": "img/nums.png",
+	"icons": "img/nums2.png",
 };
 
 //画像の読み込み 
@@ -163,9 +163,9 @@ window.onload = function () {
 		}
 
 		// 切り出し位置
-		var sx = num * 32;
+		var sx = (num-1) * 16;
 		// 数字をマスの中央に表示するため左と下に8ずつずらす。
-		ctx.drawImage(images.icons, sx, 0, 32, 32, x, y, 32, 32);
+		ctx.drawImage(images.icons, sx, 0, 16, 16, x+8, y+8, 16, 16);
 	};
 
 	// マスの描画
