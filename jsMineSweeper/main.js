@@ -25,6 +25,7 @@ var imgIndexes = {
 	"bomb": "img/mine.png",
 	"redfloor": "img/redfloor.png",
 	"icons": "img/nums2.png",
+	//"icons": "img/nums3.png",
 };
 
 //画像の読み込み 
