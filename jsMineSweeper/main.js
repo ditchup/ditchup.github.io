@@ -149,6 +149,30 @@ window.onload = function () {
 
 	};
 	
+	floorMap.setBombSample = function () {
+		
+		var set = function (i, j) {
+			floorMap[i][j] = 9;
+			floorMap.incrementAround(i, j);
+		};
+		set(4, 4);
+		set(5, 4);
+		set(2, 5);
+		set(2, 6);
+		set(3, 6);
+		set(4, 6);
+		set(4, 5);
+		set(6, 5);
+		set(6, 6);
+		set(5, 6);
+		set(6, 7);
+		set(6, 8);
+		set(5, 8);
+		set(4, 8);
+		set(4, 7);
+		set(8, 5);
+	}
+
 	// どうやって描画するか
 	var images = stuff.imagebank.images; // window.onload外でロード済みのimg要素群
 
@@ -317,6 +341,8 @@ window.onload = function () {
 		// 最初に開けるとき爆弾の位置を決める
 		if (openedNum === 0) {
 			floorMap.setBomb(P.BOMBNUM, i, j);
+			// 数値チップの表示テスト（1~8まで表示）
+			//floorMap.setBombSample();
 		}
 
 		// ゲームオーバー
